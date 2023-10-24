@@ -5,22 +5,44 @@ const SUPER_SECRET_PASSWORD = "h4x0r1337";
 
 const receivedPassword = "password1234";
 
+if (receivedPassword === SUPER_SECRET_PASSWORD) {
+  console.log("Welcome! You are logged in as Brunhilde1984.");
+} else {
+  console.log("Access denied!");
+};
+
 // Part 2: Even / Odd
 const number = 6;
+
+if (number % 2 == 0) {
+  console.log("even number");
+} else {
+  console.log("odd number");
+};
 
 // Part 3: Hotdogs
 const numberOfHotdogs = 42;
 
-// Part 4: Daytime
-const currentHour = 12;
+if (numberOfHotdogs < 5) {
+  console.log("You have to pay " + numberOfHotdogs * 2.00 + " €.");
+} else if (numberOfHotdogs >= 5 && numberOfHotdogs < 100) {
+  console.log("You have to pay " + numberOfHotdogs * 1.50 + " €.");
+} else if (numberOfHotdogs >= 100 && numberOfHotdogs < 1000000) {
+  console.log("You have to pay " + numberOfHotdogs * 1.00 + " €.");
+} else {
+  console.log("You have to pay " + numberOfHotdogs * 0.10 + " €.");
+}
 
-const statement = "";
+// Part 4: Daytime
+const currentHour = 18;
+
+const statement = currentHour < 17 ? "Still need to learn..." : "Partytime!!!";
 
 console.log(statement);
 
 // Part 5: Greeting
 const name = "Archibald";
 
-const greeting = "Hello " + "//enter your code here" + "!";
+const greeting = "Hello " + (name == "Thomas" ? "coach" : name) + "!";
 
 console.log(greeting);
